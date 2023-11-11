@@ -1,0 +1,29 @@
+from xrpl.wallet import Wallet
+from xrpl.clients import JsonRpcClient
+from xrpl.models.transactions import Payment
+
+# Create a new wallet
+wallet = Wallet.create()
+print("New Wallet: ", wallet)
+
+# Address and Secret of the created wallet
+address = wallet.classic_address
+secret = wallet.seed
+
+# Connect to the XRP Ledger Testnet
+client = JsonRpcClient("https://s.altnet.rippletest.net:51234")
+
+# Check the balance of the new wallet
+balance = client.get_balance(address)
+print("Wallet Balance:", balance)
+
+# Construct and submit a payment transaction
+payment = Payment(
+    account=address,
+    amount="10000",  # Amount in drops (1 XRP = 1,000,000 drops)
+    destination="rPT1Sjq2YGrBMTttX4GZHjKu9dyfzbpAYe",  # Example destination address
+    sequence=client.get_account_info(address)["account_data"]["Sequence"],
+)
+prepared_tx = payment.sign(secret)
+response = client.submit_transaction(prepared_tx)
+print("Transaction Submitted:", response)

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XRPL Wallet</title>
+    <style>
+        /* Basic styling, you might want to add more to enhance the design */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0088cc;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0088cc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #005580;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>XRPL Wallet</h1>
+        <p>A Secure and Efficient Way to Manage XRP</p>
+    </header>
+    
+    <section>
+        <div class="container">
+            <h2>Features</h2>
+            <p>Securely manage your XRP transactions, view account balances, and more.</p>
+            <p>Explore the possibilities of the XRP Ledger with ease.</p>
+            <a href="https://github.com/yourusername/yourXRPLwallet" class="btn">GitHub Repository</a>
+            <a href="#" class="btn">Demo</a>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h2>Get Involved</h2>
+            <p>Join our community, contribute, and stay updated with the project's progress.</p>
+            <a href="https://twitter.com/yourXRPLwallet" class="btn">Twitter</a>
+            <a href="#" class="btn">Subscribe</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Your XRPL Wallet</p>
+    </footer>
+</body>
+</html>
